@@ -1,0 +1,6 @@
+module sb.keycloak.main {
+
+    requires spring.boot.autoconfigure;
+    requires spring.boot;
+
+}
