@@ -1,0 +1,11 @@
+keycloak:
+  auth-server-url: http://localhost:8888/auth
+  realm: SpringBootKeycloak
+  resource: login-app
+  public-client: true
+  security-constraints:
+      - authRoles:
+          - user
+        securityCollections:
+          - patterns:
+            - /customers/*

@@ -25,7 +25,6 @@ version = '0.0.1-SNAPSHOT'
 sourceCompatibility = 10
 targetCompatibility = 10
 
-
 repositories {
 	mavenCentral()
     jcenter()
@@ -36,6 +35,12 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-security')
 	compile('org.springframework.boot:spring-boot-starter-thymeleaf')
 	compile('org.springframework.boot:spring-boot-starter-web')
+	compile('org.springframework.boot:spring-boot-starter-data-jpa')
+	compile('javax.xml.bind:jaxb-api:2.2.8')
+
+	compile('org.keycloak:keycloak-spring-boot-starter:3.4.3.Final')
+
+    runtime('org.hsqldb:hsqldb:2.4.0')
 
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	testCompile('org.springframework.security:spring-security-test')

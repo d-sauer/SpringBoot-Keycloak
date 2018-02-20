@@ -1,5 +1,28 @@
 = Spring Boot with Keycloak
 
-http://www.baeldung.com/spring-boot-keycloak[Tutorial]
+- Based on http://www.baeldung.com/spring-boot-keycloak[example]
+- Java 10
+- Gradle 4.5+
 
+
+== Keycloak
+
+Start Keycloak
+
+    docker run -p 8888:8080 -e KEYCLOAK_USER=sysadmin -e KEYCLOAK_PASSWORD=sysadmin jboss/keycloak
+
+
+* Access Keycloak: http://localhost:8888/
+* Create new realm `SpringBootKeycloak`
+* Add client
+** name: login-app
+** Valid Redirect URIs: `http://localhost:8080/*`
+* Create a Role
+** role name: user
+* Create a User
+** username: user1
+** assign `user` role to the `user1`
+ 
+
+Access Spring Boot application: http://localhost:8080/
 
